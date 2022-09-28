@@ -28,28 +28,24 @@ const ProductScreen = () => {
   };
   
   const _renderItem = ({ item }) => {
-    return(
-        <View style={{flex:1}}>
-            <View style={{flex:1, flexDirection:'row',margin:5}}>
-                <Image
-                  resizeMode='cover'
-                  source={{uri: item.picture}}
-                  style={styles.thumbnail}
-                />
-                <View style={styles.dataContainer}>
-                  <View style={styles.dataContent}>
-                    <Text style={styles.title}>
-                      {item.title}
-                    </Text>
-                    <Text style={styles.detail}>
-                      {item.detail}
-                    </Text>
-                  </View>
-                </View>
+    return (
+      <View>
+        <View style={styles.container}>
+          <Image
+            style={styles.thumbnail}
+            source={{ uri: item.picture }}
+            resizeMode="cover"
+          />
+          <View style={styles.dataContainer}>
+            <View style={styles.dataContent}>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.detail}>{item.detail}</Text>
             </View>
+          </View>
         </View>
-    )
-  }
+      </View>
+    );
+  };
 
 
   return (
